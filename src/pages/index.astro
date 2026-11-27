@@ -3,7 +3,7 @@
 // Add src/pages/talks.astro and you get "/talks".
 import Base from '../layouts/Base.astro';
 import Experience from '../components/Experience.astro';
-import { experience } from '../data/experience';
+import { experience, other } from '../data/experience';
 
 const email = 'theo.england@gmail.com';
 const linkedin = 'https://www.linkedin.com/in/theo-england-16424b34/';
@@ -11,21 +11,25 @@ const twitter = 'https://twitter.com/theo_england';
 ---
 
 <Base
-  title="Theo England — Marketing, community & events"
-  description="Berlin-based marketer who builds communities, conferences and content for technical audiences."
+  title="Theo England — Head of Marketing, go-to-market for technology companies"
+  description="Berlin-based Head of Marketing building go-to-market for technology companies."
 >
   <main>
     <img class="portrait" src="theo.jpeg" alt="Theo England" width="112" height="112" />
     <h1>Theo England</h1>
-    <p class="lede">
-      I build marketing, communities and conferences for technical audiences, and I
-      usually end up running most of the pieces myself: content, analytics, the website,
-      speaker relations and the event on the day.
+    <p class="lede">Head of Marketing, building go-to-market for technology companies.</p>
+    <p>
+      I've built marketing from the ground up at Aardling, Quix and Cucumber: founding
+      Data Mesh Live, taking Quix from seed to Series A, and running marketing at
+      Cucumber through its acquisition by SmartBear.
     </p>
     <p class="muted">Based in Berlin. Open to new roles.</p>
 
     <h2>Experience</h2>
     <Experience roles={experience} />
+
+    <h2>Side projects &amp; early roles</h2>
+    <Experience roles={other} compact />
 
     <h2>Contact</h2>
     <p>
