@@ -1,0 +1,34 @@
+---
+// A component: a reusable chunk of markup with its own scoped styles.
+// It receives a list of roles and renders one entry per role.
+import type { Role } from '../data/experience';
+
+interface Props {
+  roles: Role[];
+}
+
+const { roles } = Astro.props;
+---
+
+<ol>
+  {roles.map((role) => (
+    <li>
+      <div class="head">
+        <strong>{role.url ? <a href={role.url}>{role.org}</a> : role.org}</strong>
+        <span class="period">{role.period}</span>
+      </div>
+      <div class="title">{role.title}</div>
+      <p>{role.summary}</p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  /* Styles in a component only apply to that component. */
+  ol { list-style: none; padding: 0; margin: 0; }
+  li { margin-bottom: 1.75rem; }
+  .head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .period, .title { color: var(--muted); font-size: 0.925rem; }
+  .title { margin-bottom: 0.35rem; }
+  p { margin: 0; }
+</style>
