@@ -8,6 +8,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource-variable/syne": "^5.3.0",
     "astro": "^7.4.13"
   },
   "type": "module",
