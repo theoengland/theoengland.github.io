@@ -43,11 +43,10 @@ h1 {
 
 h2 {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-transform: lowercase;
+  color: var(--fg);
   margin: 3.5rem 0 1.25rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--rule);
